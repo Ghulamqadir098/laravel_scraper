@@ -10,8 +10,8 @@
             <div class=" col-6 col-md-3  col-sm-6 single__product">
 
                 <div class="image__container feature__image m-2">
-                    @foreach ($item->images as $item)
-                        <img class="img-fluid" width="749" height="1124" src="{{ $item->image_url }}"
+                    @foreach ($item->images as $itemimage)
+                        <img class="img-fluid" width="749" height="1124" src="{{ $itemimage->image_url }}"
                             alt="Raja-Sahib-image">
                         
                     @endforeach
@@ -19,10 +19,10 @@
                         Details</a></button>
                 </div>
                 <h6 class="title">
-                    <a href="#">Ramsha - Wedding Collection Vol 4 - HB-401 - Unstitched</a>
+                    <a href="#">{{$item->name}}</a>
                 </h6>
                 <h6 class="title">
-                    RS 2,000
+                    RS {{$item->price}}
                 </h6>
 
             </div>
